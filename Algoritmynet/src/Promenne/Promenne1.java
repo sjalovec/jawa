@@ -69,7 +69,7 @@ public class Promenne1 {
     System.out.println(l);
     System.out.println(d5);
     System.out.println(f2);
-    //System.out.println(ch3);
+    //System.out.println(ch3); //tohle je zakomentovany, protože ch3 nefunguje
     System.out.println(bool);
     }
 }
