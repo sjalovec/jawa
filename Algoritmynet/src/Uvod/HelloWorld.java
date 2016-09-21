@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package algoritmynet;
+package Uvod;
 
 /**
  *
  * @author P3401971
  */
-public class Algoritmynet {
+public class HelloWorld {
 
     /**
      * @param args the command line arguments
