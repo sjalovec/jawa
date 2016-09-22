@@ -19,6 +19,6 @@ public class PlatnostPromenne { //blok třídy
             int b = 10;
             System.out.println(b); //vypise 10
         } //konec vnitřního bloku
-        System.out.println(b); //toto hodí chybu, promenna je deklarovana ve vnitrnim bloku
+        //System.out.println(b); //toto hodí chybu, promenna je deklarovana ve vnitrnim bloku
     }
 }
