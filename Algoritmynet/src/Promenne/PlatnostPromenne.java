@@ -21,5 +21,4 @@ public class PlatnostPromenne { //blok třídy
         } //konec vnitřního bloku
         System.out.println(b); //toto hodí chybu, promenna je deklarovana ve vnitrnim bloku
     }
-
 }
