@@ -31,5 +31,4 @@ public class OperatoryOP {
         a2 *=3;
         System.out.println("Proměnná a2 násobená(1*3) = "+a2); //vypíše 3
     }
-
 }
