@@ -13,16 +13,17 @@ public class CviceniJT_trojuhelnik {
  public static void main(String[] args) {
         System.out.println("");
         int m = 5;
-        int n = 1;
+        int n = 0;
         for (int i = 0; i < m; i++)
         {
+            n++;
             for (int j = 0; j < n; j++)
             {
-               j = 0;
                System.out.print("*");              
             }
-            n++;
+            
             System.out.println("");
         }
+ 
     }
 }
