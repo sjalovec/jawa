@@ -11,7 +11,11 @@ package Metody;
  */
 public class PredavaniParametru {
     public static void main(String[] args) {
-        //tady bude moje instance
+        
+        //moje instance, vypíše null - protože nemáme žádné hodnoty v promenné
+        PredavaniParametru PP_instance_1 = new PredavaniParametru();
+        PP_instance_1.coJsem();
+        
     }
     private String kind;
     private String sound;
