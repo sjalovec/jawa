@@ -3,9 +3,19 @@ package Metody;
 
 public class TridniMetodyaPromenne {
     //vstup aplikace
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException{
+        Zviratko asta = new Zviratko(); //toto je konstruktor bez parametru
+        asta.setKind("pes");
+        asta.setSound("haf haf");
         
+        System.out.println("Počet zviřátek: "+Zviratko.getCreatedCount()); //tady by mělo být 1
         
+        //nyní vytvoříme jiné zviřátko (nová instance)
+        System.out.println("Teď budu vytvářet kočku = další instanci\n");
+        Zviratko micka = new Zviratko("kocka", "mňauky čauky"); //konstruktor s parametry
+        micka.pozdrav(); //použije metodu pozdrav s hodnotami proměnných zadaných v konstruktoru
+        
+        System.out.println("Pořet zviřátek: "+Zviratko.getCreatedCount()); //tady by mělo být 2
     }
 }
 
