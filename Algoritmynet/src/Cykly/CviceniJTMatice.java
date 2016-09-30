@@ -41,29 +41,21 @@ public class CviceniJTMatice {
                 System.out.print(" ");
             }
             System.out.println("");
-        }
+        }       
         //násobíme matice
         System.out.println("");
         System.out.println("Výsledná matice násobení: "+x+"x"+z);
         {
-            /*
-            for (int i = 0; i < aRows; i++) { // aRow
-            for (int j = 0; j < bColumns; j++) { // bColumn
-                for (int k = 0; k < aColumns; k++) { // aColumn
-                    C[i][j] += A[i][k] * B[k][j];
-            */
-            for (i = 0; i<z;i++){
-                for (l = 0; l<x;l++){
+            for (i = 0; i<x;i++){
+                for (l = 0; l<z;l++){                   
                     for (j = 0; j < y; j++){
-                    System.out.print(maticeCPole[i][l] = maticeCPole[i][l]+(maticeAPole[i][j] * maticeBPole[j][l]));
+                    System.out.print(maticeCPole[i][l]=maticeCPole[i][l]+ (maticeAPole[i][j] * maticeBPole[j][l]));
                     System.out.print(" ");
                     }
                 System.out.println("");
                 }
             }
-        }
-        
-        
+        }       
+        //System.out.println("Výsledek je: "+(maticeAPole[0][0])*maticeBPole[0][0]);
     }
-
 }
