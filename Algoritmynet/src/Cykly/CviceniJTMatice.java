@@ -52,8 +52,8 @@ public class CviceniJTMatice {
                     System.out.print(maticeCPole[i][l]=maticeCPole[i][l]+ (maticeAPole[i][j] * maticeBPole[j][l]));
                     System.out.print(" ");
                     }
-                System.out.println("");
-                }
+                
+                }System.out.println("");
             }
         }       
         //System.out.println("Výsledek je: "+(maticeAPole[0][0])*maticeBPole[0][0]);
