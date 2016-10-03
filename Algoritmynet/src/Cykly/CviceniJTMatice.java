@@ -49,10 +49,10 @@ public class CviceniJTMatice {
             for (i = 0; i<x;i++){
                 for (l = 0; l<z;l++){                   
                     for (j = 0; j < y; j++){
-                    System.out.print(maticeCPole[i][l]=maticeCPole[i][l]+ (maticeAPole[i][j] * maticeBPole[j][l]));
-                    System.out.print(" ");
+                    maticeCPole[i][l]=maticeCPole[i][l]+ (maticeAPole[i][j] * maticeBPole[j][l]);                    
                     }
-                
+                    System.out.print(maticeCPole[i][l]);
+                    System.out.print(" ");
                 }System.out.println("");
             }
         }       
