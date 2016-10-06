@@ -8,11 +8,11 @@ public class ukolOdTJPoleHledani {
         rekurzeTestCyklus(5);
 
     }
-
+/*
     public static int rekurzePole(int vstupniHodnota) {
         int[] poleHodnotRek = {1, 3, 5, 7, 9, 11, 13, 15, 17, 19};
     }
-
+*/
     public static int rekurzeTestCyklus(int cisloCoHledam) {
         int[] poleHodnot = {1, 3, 5, 7, 9, 11, 13, 15, 17, 19};
         int pomProm = 0;
