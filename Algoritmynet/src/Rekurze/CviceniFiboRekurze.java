@@ -3,7 +3,7 @@ package Rekurze;
 public class CviceniFiboRekurze {
 
     public static void main(String[] args) {
-        System.out.println(mujFibonacci(4));
+        System.out.println(mujFibonacci(3));
 
     }
 
