@@ -67,17 +67,17 @@ class B extends A {
 }
 
 class C extends A implements Externalizable {
-    //konstruktor????
+    //konstruktor
     public C() {
     }
     public void writeExternal (ObjectOutput out2) throws IOException {
-        out2.writeObject(this.foo); //proč tam je this???
-        out2.writeObject(this.bar); //proč tam je this???
+        out2.writeObject(this.foo); //lepsi citelnost a jistota pro neprepsani
+        out2.writeObject(this.bar); //lepsi citelnost a jistota pro neprepsani
     }
     
     public void readExternal (ObjectInput in2) throws IOException, ClassNotFoundException {
-        this.foo = (String) in2.readObject(); //tohle neznam
-        this.bar = (String) in2.readObject(); //tohle neznam
+        this.foo = (String) in2.readObject(); //přetypování
+        this.bar = (String) in2.readObject(); //přetypování
         
     }
 }
