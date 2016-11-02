@@ -1,6 +1,6 @@
 package HashovaciTabulka;
 
-public class HashTable<KEY, VALUE> implements TableIface<KEY, VALUE> {
+public abstract class HashTable<KEY, VALUE> implements TableIface<KEY, VALUE> {
 
     //Pomer zaplneni pri kterem dojde k vytvoreni nove (vetsi) tabulky
     private final float LOAD_FACTOR = 0.75f;
@@ -22,9 +22,9 @@ public class HashTable<KEY, VALUE> implements TableIface<KEY, VALUE> {
 
     //zkonstruuje hashovaci tabulku
     public HashTable(int initialCapacity) {
-        if (initialCapacity <= 0) {
-            thrown new IllegalArgumentException("Kapacita nesmi byt mensi nez nula.");
-        }
+        //if (initialCapacity <= 0) {
+        //    thrown new IllegalArgumentException("Kapacita nesmi byt mensi nez nula.");
+        //}
         this.INITIAL_CAPACITY = initialCapacity;
         this.table = new Entry[initialCapacity];
     }
