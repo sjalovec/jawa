@@ -1,5 +1,5 @@
 package Vlakna;
-
+//Demonstrace chyby v praci nad spolecnym zdrojem
 public class NonAtomicExample {
     
     public volatile static int i = 0; //volatile == necachuj na procesoru
