@@ -1,5 +1,8 @@
 package action;
+//Interface specifikujici akci operatoru
 
-public class OperatorActionIface {
+public interface OperatorActionIface {
 
+    //Provede akci operatoru
+    public void performInputAction();
 }
