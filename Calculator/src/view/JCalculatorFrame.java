@@ -117,7 +117,7 @@ public class JCalculatorFrame extends JFrame {
 
         panel.add(new JCalculatorButton("+", KeyEvent.VK_ADD, new PlusAction(resultField, model)), new ButtonGridBagConstraints(3, 1, new Insets(inset, bigInset, inset, inset)));
         panel.add(new JCalculatorButton("-", KeyEvent.VK_SUBTRACT, new MinusAction(resultField, model)), new ButtonGridBagConstraints(4, 1));
-        panel.add(new JCalculatorButton("\\u00D7", KeyEvent.VK_MULTIPLY, new MultiplicationAction(resultField, model)), new ButtonGridBagConstraints(3, 2, new Insets(inset, bigInset, inset, inset))); //\\u00D7 je UTF8 kod pro znamenko multiplikace
+        panel.add(new JCalculatorButton("*", KeyEvent.VK_MULTIPLY, new MultiplicationAction(resultField, model)), new ButtonGridBagConstraints(3, 2, new Insets(inset, bigInset, inset, inset))); //\\u00D7 je UTF8 kod pro znamenko multiplikace
         panel.add(new JCalculatorButton("/", KeyEvent.VK_DIVIDE, new DivisionAction(resultField, model)), new ButtonGridBagConstraints(4, 2));
 
         panel.add(new JCalculatorButton("AC", KeyEvent.VK_DELETE, new ResetAction(resultField, model)), new ButtonGridBagConstraints(3, 3, 1, 2, new Insets(inset, bigInset, inset, inset)));
