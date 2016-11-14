@@ -14,6 +14,6 @@ public class ResultAction extends AbstractCalculatorAction {
     @Override
     public void performInputAction() {
         getModel().getOperator().performOperatorAction();
-        getResultField().setText(String.valueOf(getModel().getStoredDefault()));
+        getResultField().setText(String.valueOf(getModel().getStoredResult()));
     }
 }

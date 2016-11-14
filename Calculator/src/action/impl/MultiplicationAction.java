@@ -1,14 +1,17 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package action.impl;
+//Operace nasobeni
+import action.AbstractOperatorAction;
+import javax.swing.JTextField;
+import model.CalculatorModel;
 
-/**
- * @author P3401971
- */
-public class MultiplicationAction {
+public abstract class MultiplicationAction extends AbstractOperatorAction {
+    public MultiplicationAction(JTextField resultField, CalculatorModel model) {
+        super(resultField, model);
+    }
+    
+    @Override
+    public void performActualOperatorAction() {
+        getModel().setStoredResult(getModel().getStoredResult() * Double.valueOf(getModel().getCurrentInput()));
+    }
 
 }

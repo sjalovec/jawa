@@ -4,5 +4,5 @@ package action;
 public interface OperatorActionIface {
 
     //Provede akci operatoru
-    public void performInputAction();
+    public void performOperatorAction();
 }

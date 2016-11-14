@@ -14,6 +14,6 @@ public class ResetAction extends AbstractCalculatorAction {
     @Override
     public void performInputAction() {
         getModel().resetModel();
-        getResultField().setText(String.valueOf(getModel().getStoredDefault()));
+        getResultField().setText(String.valueOf(getModel().getStoredResult()));
     }
 }

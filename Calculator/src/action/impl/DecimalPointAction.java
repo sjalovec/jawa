@@ -13,7 +13,7 @@ public class DecimalPointAction extends AbstractCalculatorAction {
 
     @Override
     public void performInputAction() {
-        if (!model.isDecimalPresent()) {
+        if (!model.isDecimalPointPresent()) {
             getModel().setDecimalPointPresent(true);
             if (getModel().getCurrentInput().length() > 0) {
                 getModel().setCurrentInput(getModel().getCurrentInput() + ".");

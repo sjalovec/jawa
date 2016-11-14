@@ -37,7 +37,7 @@ public class CalculatorModel {
         this.currentInput = currentInput;
     }
 
-    public boolean getDecimalPointPresent() {
+    public boolean isDecimalPointPresent() {
         return decimalPointPresent;
     }
 
