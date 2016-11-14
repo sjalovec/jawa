@@ -12,6 +12,12 @@ public abstract class AbstractOperatorAction extends AbstractCalculatorAction im
     }
 
     @Override
+    public void performInputAction() {
+        getModel().getOperator().performOperatorAction();
+        getModel().setOperator(this);
+    }
+
+    @Override
     public void performOperatorAction() {
         if (getModel().getCurrentInput().length() > 0) {
             performActualOperatorAction();
