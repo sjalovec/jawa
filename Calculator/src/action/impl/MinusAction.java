@@ -5,7 +5,7 @@ import action.AbstractOperatorAction;
 import javax.swing.JTextField;
 import model.CalculatorModel;
 
-public abstract class MinusAction extends AbstractOperatorAction {
+public class MinusAction extends AbstractOperatorAction {
     public MinusAction(JTextField resultField, CalculatorModel model) {
         super(resultField, model);
     }
@@ -14,5 +14,4 @@ public abstract class MinusAction extends AbstractOperatorAction {
     public void performActualOperatorAction() {
         getModel().setStoredResult(getModel().getStoredResult() - Double.valueOf(getModel().getCurrentInput()));
     }
-
 }

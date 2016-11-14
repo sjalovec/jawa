@@ -5,7 +5,7 @@ import action.AbstractOperatorAction;
 import javax.swing.JTextField;
 import model.CalculatorModel;
 
-public abstract class PlusAction extends AbstractOperatorAction {
+public class PlusAction extends AbstractOperatorAction {
 
     public PlusAction(JTextField resultField, CalculatorModel model) {
         super(resultField, model);

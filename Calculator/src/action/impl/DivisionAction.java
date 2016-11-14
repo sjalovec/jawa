@@ -4,7 +4,7 @@ import action.AbstractOperatorAction;
 import javax.swing.JTextField;
 import model.CalculatorModel;
 
-public abstract class DivisionAction extends AbstractOperatorAction {
+public class DivisionAction extends AbstractOperatorAction {
     public DivisionAction(JTextField resultField, CalculatorModel model) {
         super(resultField, model);
     }

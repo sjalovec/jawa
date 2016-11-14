@@ -4,7 +4,7 @@ import action.AbstractOperatorAction;
 import javax.swing.JTextField;
 import model.CalculatorModel;
 
-public abstract class MultiplicationAction extends AbstractOperatorAction {
+public class MultiplicationAction extends AbstractOperatorAction {
     public MultiplicationAction(JTextField resultField, CalculatorModel model) {
         super(resultField, model);
     }
@@ -13,5 +13,4 @@ public abstract class MultiplicationAction extends AbstractOperatorAction {
     public void performActualOperatorAction() {
         getModel().setStoredResult(getModel().getStoredResult() * Double.valueOf(getModel().getCurrentInput()));
     }
-
 }

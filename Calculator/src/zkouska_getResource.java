@@ -8,7 +8,7 @@ public class zkouska_getResource {
     Class cls = c.getClass();
 
     // finds resource relative to the class location
-    URL url = cls.getResource("appletviewer.exe");
+    URL url = cls.getResource("manifest.mf");
     System.out.println("Value = " + url);
 
     // finds resource relative to the class location
