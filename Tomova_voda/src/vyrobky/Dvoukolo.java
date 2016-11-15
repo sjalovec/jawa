@@ -17,7 +17,12 @@ public class Dvoukolo implements VyrobkyIface {
     Sedlo sedlo_zadni_dvoukolo;
     
     @Override
-    public void vypisJmenoVyrobku() {
+    public void vypisText() {
         System.out.println("Já jsem dvoukolo, tzn. kolo pro dva. Dvě kola maj standardně všechny kola, ty tupče!");
+    };
+    
+    @Override
+    public void vypisTypVyrobku() {
+        System.out.println("Typ výrobku: "+typ_vyrobku);
     };
 }

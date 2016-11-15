@@ -2,5 +2,7 @@ package vyrobky;
 
 public interface VyrobkyIface {
 
-    public abstract void vypisJmenoVyrobku();
+    public void vypisText();
+    
+    public void vypisTypVyrobku();
 }
