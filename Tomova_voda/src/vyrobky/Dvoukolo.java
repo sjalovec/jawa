@@ -6,23 +6,55 @@ import zbozicko.Sedlo;
 
 public class Dvoukolo implements VyrobkyIface {
 
-    public Dvoukolo(int kolo, int ram, int sedlo) {
-        //tady pak bude volání na odečet ze skladu na počet kusů potřebných pro volání???
-    };
-    String typ_vyrobku = "Dvoukolo";
-    Kolo predni_kolo_dvoukolo;
-    Kolo zadni_kolo_dvoukolo;
-    Ram ram_dvoukolo;
-    Sedlo sedlo_predni_dvoukolo;
-    Sedlo sedlo_zadni_dvoukolo;
-    
+    private static final String typ_vyrobku = "Dvoukolo";
+    private Kolo predni_kolo;
+    private Kolo zadni_kolo;
+    private Ram ram;
+    private Sedlo predni_sedlo;
+    private Sedlo zadni_sedlo;
+
+    public Dvoukolo(Kolo kolo_predni, Kolo kolo_zadni, Ram ram, Sedlo sedlo_predni, Sedlo sedlo_zadni) {
+        Kolo k = new Kolo(kolo_predni);
+        this.predni_kolo = kolo_predni;
+        this.zadni_kolo = kolo_zadni;
+        this.ram = ram;
+        this.predni_sedlo = sedlo_predni;
+        this.zadni_sedlo = sedlo_zadni;
+    }
+
+    public Dvoukolo() {
+        this.predni_kolo = 1;
+        this.zadni_kolo = 1;
+        this.ram = 1;
+        this.predni_sedlo = 1;
+        this.zadni_sedlo = 1;
+    }
+    /*
+    @Override
+    public void add(ENTITY i) {
+        Node n = new Node(i);
+        if (size == 0) {
+            this.first = n;
+            this.last = n;
+        } else {
+            this.last.next = n;
+            this.last = n;
+        }size++;
+    */    /*
+    private class Node {
+        private ENTITY value;
+        private Node next;
+        private Node(ENTITY value) {
+            this.value = value;
+        }}
+    */
     @Override
     public void vypisText() {
         System.out.println("Já jsem dvoukolo, tzn. kolo pro dva. Dvě kola maj standardně všechny kola, ty tupče!");
-    };
-    
+    }
+
     @Override
     public void vypisTypVyrobku() {
-        System.out.println("Typ výrobku: "+typ_vyrobku);
-    };
+        System.out.println("Typ výrobku: " + typ_vyrobku);
+    }
 }

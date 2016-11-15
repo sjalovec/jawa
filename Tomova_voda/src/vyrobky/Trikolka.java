@@ -4,16 +4,30 @@ import zbozicko.Kolo;
 import zbozicko.Ram;
 import zbozicko.Sedlo;
 
-public class Trikolka {
+public class Trikolka implements VyrobkyIface {
 
-    public Trikolka(int kolo, int ram, int sedlo) {
-        //tady pak bude volání na odečet ze skladu na počet kusů potřebných pro volání???
-    }
-    ;
-    Kolo predni_kolo_trikolka;
-    Kolo zadni_kolo_leve_trikolka;
-    Kolo zadni_kolo_prave_trikolka;
-    Ram ram_trikolka;
-    Sedlo sedlo_trikolka;
+    private static final String typ_vyrobku = "Trikolka";
+    Kolo predni_kolo;
+    Kolo zadni_kolo_leve;
+    Kolo zadni_kolo_prave;
+    Ram ram;
+    Sedlo sedlo;
 
+    public Trikolka(Kolo kolo_predni, Kolo kolo_zadni_leve, Kolo kolo_zadni_prave, Ram ram, Sedlo sedlo) {
+        this.predni_kolo = kolo_predni;
+        this.zadni_kolo_leve = kolo_zadni_leve;
+        this.zadni_kolo_prave = kolo_zadni_prave;
+        this.ram = ram;
+        this.sedlo = sedlo;
+    };
+    
+    @Override
+    public void vypisText() {
+        System.out.println("Já jsem dvoukolo, tzn. kolo pro dva. Dvě kola maj standardně všechny kola, ty tupče!");
+    };
+    
+    @Override
+    public void vypisTypVyrobku() {
+        System.out.println("Typ výrobku: " + typ_vyrobku);
+    };
 }
