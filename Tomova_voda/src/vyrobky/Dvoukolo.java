@@ -21,14 +21,6 @@ public class Dvoukolo implements VyrobkyIface {
         this.predni_sedlo = sedlo_predni;
         this.zadni_sedlo = sedlo_zadni;
     }
-
-    public Dvoukolo() {
-        this.predni_kolo = 1;
-        this.zadni_kolo = 1;
-        this.ram = 1;
-        this.predni_sedlo = 1;
-        this.zadni_sedlo = 1;
-    }
     /*
     @Override
     public void add(ENTITY i) {
@@ -40,7 +32,7 @@ public class Dvoukolo implements VyrobkyIface {
             this.last.next = n;
             this.last = n;
         }size++;
-    */    /*
+
     private class Node {
         private ENTITY value;
         private Node next;

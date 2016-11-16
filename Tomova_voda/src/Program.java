@@ -4,12 +4,9 @@ import vyrobky.Dvoukolo;
 public class Program {
 
     public static void main(String[] args) {
-        Dvoukolo dk = new Dvoukolo();
+        Dvoukolo dk = new Dvoukolo(1, 1, 1, 1, 1);
         dk.vypisText();
         dk.vypisTypVyrobku();
-        
-        Dvoukolo dk2 = new Dvoukolo;
-
     }
 
 }
