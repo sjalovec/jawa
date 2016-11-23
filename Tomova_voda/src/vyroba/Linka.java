@@ -1,5 +1,7 @@
 package vyroba;
 
+import storage.Sklad;
+import storage.runOutOfGoods;
 import vyrobky.Dvoukolo;
 import vyrobky.Liberta;
 import vyrobky.Trikolka;
@@ -10,12 +12,16 @@ import zbozicko.Sedlo;
 public class Linka {
     public static int pocetVyrobku = 0;
     
-    public static void vyrobVyrobek(String vyrobek) {
+    public static void vyrobVyrobek(String vyrobek) throws runOutOfGoods {
         switch (vyrobek) {
             case "Liberta":
+                if (Sklad.pocetKolo < 2) {
+                    throw new runOutOfGoods();
+                } else {
                 Liberta l = new Liberta(new Kolo(), new Kolo(), new Ram(), new Sedlo());
                 l.vypisTypVyrobku();
                 pocetVyrobku++;
+                }
                 break;
             case "Dvoukolo":
                 Dvoukolo dk = new Dvoukolo(new Kolo(), new Kolo(), new Ram(), new Sedlo(), new Sedlo());
