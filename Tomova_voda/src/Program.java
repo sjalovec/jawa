@@ -13,7 +13,9 @@ import zbozicko.Sedlo;
 public class Program {
 
     public static void main(String[] args) {
-        Dvoukolo dk = new Dvoukolo(new Kolo(), new Kolo(), new Ram(), new Sedlo(), new Sedlo());
+        vyroba.Linka.vyrobVyrobek("Trikolka");
+        /*
+Dvoukolo dk = new Dvoukolo(new Kolo(), new Kolo(), new Ram(), new Sedlo(), new Sedlo());
         dk.vypisTypVyrobku();
         dk.vypisText();
 
@@ -28,7 +30,11 @@ public class Program {
         Sklad.stavZbozi("kolo");
         
         Sklad.objednejZbozi("kolo", 5);
+*/
         Sklad.stavZbozi("kolo");
+        Sklad.stavZbozi("ram");
+        Sklad.stavZbozi("sedlo");
+
     }
 
 }
