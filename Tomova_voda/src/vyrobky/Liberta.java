@@ -26,6 +26,6 @@ public class Liberta implements VyrobkyIface{
 
     @Override
     public void vypisTypVyrobku() {
-        System.out.println("Typ výrobku: " + typ_vyrobku);
+        System.out.println("Vyrábím výrobek: " + typ_vyrobku);
     }
 }

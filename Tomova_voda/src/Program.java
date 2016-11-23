@@ -4,12 +4,6 @@
 
 import storage.Sklad;
 import vyroba.Linka;
-import vyrobky.Dvoukolo;
-import vyrobky.Liberta;
-import vyrobky.Trikolka;
-import zbozicko.Kolo;
-import zbozicko.Ram;
-import zbozicko.Sedlo;
 
 public class Program {
 
@@ -19,7 +13,7 @@ public class Program {
         Sklad.stavZbozi("ram");
         Sklad.stavZbozi("sedlo");
         
-        System.out.println("Je vyrobeno: "+Linka.pocetVyrobku()+" ks výrobků.");
+        Linka.pocetVyrobku();
 
     }
 
