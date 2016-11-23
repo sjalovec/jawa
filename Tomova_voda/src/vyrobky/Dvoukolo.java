@@ -22,7 +22,7 @@ public class Dvoukolo implements VyrobkyIface {
     }
     @Override
     public void vypisText() {
-        System.out.println("Já jsem dvoukolo, tzn. kolo pro dva. Dvě kola maj standardně všechny kola, ty tupče!");
+        System.out.println("Tzn. kolo pro dva. Dvě kola maj standardně všechny kola, ty tupče!");
     }
 
     @Override
