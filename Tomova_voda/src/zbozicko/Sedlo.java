@@ -1,5 +1,5 @@
 package zbozicko;
 
-public class Sedlo<ENTITY> implements Zbozi{
+public class Sedlo implements Zbozi{
 
 }
