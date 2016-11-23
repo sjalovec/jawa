@@ -1,5 +1,8 @@
 //main je tady, hlavne ted na zkouseni 
 
+//public static Kolo dement; TGIF 2016
+
+import storage.Sklad;
 import vyrobky.Dvoukolo;
 import vyrobky.Liberta;
 import vyrobky.Trikolka;
@@ -22,6 +25,7 @@ public class Program {
         tk.vypisTypVyrobku();
         tk.vypisText();
 
+        System.out.println(Sklad.pocetKolo);
     }
 
 }
