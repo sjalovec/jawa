@@ -4,7 +4,7 @@ import static storage.Sklad.runOutOfGoods;
 
 public class Sklad {
 
-    public void odeberZbozi(zbozicko.Zbozi) throws Exception {
+    public void odeberZbozi() throws Exception {
         runOutOfGoods();
     }
 
