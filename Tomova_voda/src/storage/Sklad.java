@@ -14,4 +14,8 @@ public class Sklad {
     public static int pocetKolo = 2;
     public static int pocetSedlo = 1;
     public static int pocetRam = 1;
+    
+    public static void setPocetKolo(int pocetKs) {
+        pocetKolo = pocetKolo+pocetKs;
+    }
 }

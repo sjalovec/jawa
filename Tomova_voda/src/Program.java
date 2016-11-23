@@ -1,6 +1,6 @@
 //main je tady, hlavne ted na zkouseni 
 
-//public static Kolo dement; TGIF 2016
+//public static Kolo dement; -TGIF 2016
 
 import storage.Sklad;
 import vyrobky.Dvoukolo;
@@ -26,6 +26,9 @@ public class Program {
         tk.vypisText();
 
         System.out.println(Sklad.pocetKolo);
+        
+        Sklad.setPocetKolo(2);
+        System.out.println("Přidali jsme 2 ks kol a tak nyní máme: " +Sklad.pocetKolo);
     }
 
 }
