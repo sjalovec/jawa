@@ -7,7 +7,7 @@ import zbozicko.Sedlo;
 public class Program {
 
     public static void main(String[] args) {
-        Dvoukolo dk = new Dvoukolo(new Kolo kolo_predni, new Kolo kolo_zadni, new Ram ram, new Sedlo sedlo_predni, new Sedlo sedlo_zadni);
+        Dvoukolo dk = new Dvoukolo(new Kolo(), new Kolo(), new Ram(), new Sedlo(), new Sedlo());
         dk.vypisText();
         dk.vypisTypVyrobku();
     }
