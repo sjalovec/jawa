@@ -25,10 +25,10 @@ public class Program {
         tk.vypisTypVyrobku();
         tk.vypisText();
 
-        System.out.println(Sklad.pocetKolo);
+        Sklad.stavZbozi("kolo");
         
-        Sklad.setPocetKolo(2);
-        System.out.println("Přidali jsme 2 ks kol a tak nyní máme: " +Sklad.pocetKolo);
+        Sklad.objednejZbozi("kolo", 5);
+        Sklad.stavZbozi("kolo");
     }
 
 }
