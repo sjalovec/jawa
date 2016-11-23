@@ -16,7 +16,7 @@ public class Linka {
         switch (vyrobek) {
             case "Liberta":
                 if (Sklad.pocetKolo < 2) {
-                    throw new RunOutOfGoods("Není dostatek zboží!");
+                    throw new RunOutOfGoods();
                 } else {
                 Liberta l = new Liberta(new Kolo(), new Kolo(), new Ram(), new Sedlo());
                 l.vypisTypVyrobku();
