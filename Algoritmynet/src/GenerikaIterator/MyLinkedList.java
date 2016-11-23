@@ -4,7 +4,6 @@ import java.util.Iterator;
 
 /**
  * Jednosmerne zretezeny spojovy seznam
- * @author Pavel Micka
  * @param <ENTITY> typovy parametr specifikujici ukladany typ
  */
 public class MyLinkedList<ENTITY> implements ListIface<ENTITY> {
