@@ -3,12 +3,12 @@
 //public static Kolo dement; -TGIF 2016
 
 import storage.Sklad;
-import storage.RunOutOfGoods;
+import storage.RunOutOfGoodies;
 import vyroba.Linka;
 
 public class Program {
 
-    public static void main(String[] args) throws RunOutOfGoods {
+    public static void main(String[] args) throws RunOutOfGoodies {
         Sklad.stavZbozi("kolo");
         Sklad.stavZbozi("ram");
         Sklad.stavZbozi("sedlo");
