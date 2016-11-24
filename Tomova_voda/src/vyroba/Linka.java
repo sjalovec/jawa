@@ -24,14 +24,22 @@ public class Linka {
                 }
                 break;
             case "Dvoukolo":
+                if (Sklad.dostatekZbozi("Dvoukolo") == false) {
+                    throw new RunOutOfGoodies();
+                } else {
                 Dvoukolo dk = new Dvoukolo(new Kolo(), new Kolo(), new Ram(), new Sedlo(), new Sedlo());
                 dk.vypisTypVyrobku();
                 pocetVyrobku++;
+                }
                 break;
             case "Trikolka":
+            if (Sklad.dostatekZbozi("Trikolka") == false) {
+                    throw new RunOutOfGoodies();
+                } else {
                 Trikolka tk = new Trikolka(new Kolo(), new Kolo(), new Kolo(), new Ram(), new Sedlo());
                 tk.vypisTypVyrobku();
                 pocetVyrobku++;
+                }
                 break;
             default:
                 System.out.println("Nebyl zadán správný výrobek.");

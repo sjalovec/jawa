@@ -68,4 +68,5 @@ public class Sklad {
             default:
                 return false;
         }
+    };
 }
