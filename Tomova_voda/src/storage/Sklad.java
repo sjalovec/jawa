@@ -4,7 +4,7 @@ package storage;
 public class Sklad {
 
     //zatim konfigurace na Liberta
-    public static int pocetKolo = 1;
+    public static int pocetKolo = 2;
     public static int pocetSedlo = 1;
     public static int pocetRam = 1;
 
