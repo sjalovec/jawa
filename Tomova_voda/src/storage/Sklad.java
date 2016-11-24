@@ -4,7 +4,7 @@ package storage;
 public class Sklad {
 
     //zatim konfigurace na Liberta
-    public static int pocetKolo = 2;
+    public static int pocetKolo = 1;
     public static int pocetSedlo = 1;
     public static int pocetRam = 1;
 
@@ -44,4 +44,28 @@ public class Sklad {
                 break;
         }
     };
+    
+    public static boolean dostatekZbozi(String vstupZbozi) {
+        switch(vstupZbozi) {
+            case "Liberta":
+                if (pocetKolo >= 2 && pocetSedlo >= 1 && pocetRam >= 1) {
+                    return true;          
+                } else {
+                    return false;
+                }
+            case "Dvoukolo":
+                if(pocetKolo >= 2 && pocetSedlo >= 2 && pocetRam >= 1){
+                    return true;
+                } else {
+                    return false;
+                }
+            case "Trikolka":
+                if(pocetKolo >= 3 && pocetSedlo >= 1 && pocetRam >= 1) {
+                    return true;
+                } else {
+                    return false;
+                }
+            default:
+                return false;
+        }
 }

@@ -15,7 +15,7 @@ public class Linka {
     public static void vyrobVyrobek(String vyrobek) throws RunOutOfGoodies {
         switch (vyrobek) {
             case "Liberta":
-                if (Sklad.pocetKolo < 2) {
+                if (Sklad.dostatekZbozi("Liberta") == false) {
                     throw new RunOutOfGoodies();
                 } else {
                 Liberta l = new Liberta(new Kolo(), new Kolo(), new Ram(), new Sedlo());
