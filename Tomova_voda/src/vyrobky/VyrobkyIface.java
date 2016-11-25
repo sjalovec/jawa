@@ -1,8 +1,8 @@
 package vyrobky;
 
 public interface VyrobkyIface {
-
-    public void vypisText();
+   
+    public abstract void vypisText();
     
-    public void vypisTypVyrobku();
+    public abstract void vypisTypVyrobku();
 }

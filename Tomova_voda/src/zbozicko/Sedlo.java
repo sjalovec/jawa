@@ -2,8 +2,9 @@ package zbozicko;
 
 import storage.Sklad;
 
-public class Sedlo implements Zbozi{
-    public Sedlo() {
+public class Sedlo extends Zbozi{
+    Sedlo() {
+        super(TypZbozi.SEDLO);
         Sklad.pocetSedlo = Sklad.pocetSedlo - 1;
     }
 

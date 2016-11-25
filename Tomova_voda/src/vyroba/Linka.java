@@ -8,6 +8,10 @@ import vyrobky.Trikolka;
 import zbozicko.Kolo;
 import zbozicko.Ram;
 import zbozicko.Sedlo;
+import static zbozicko.TypZbozi.KOLO;
+import static zbozicko.TypZbozi.RAM;
+import static zbozicko.TypZbozi.SEDLO;
+import zbozicko.Zbozi;
 
 public class Linka {
     public static int pocetVyrobku = 0;
@@ -18,7 +22,7 @@ public class Linka {
                 if (Sklad.dostatekZbozi("Liberta") == false) {
                     throw new RunOutOfGoodies();
                 } else {
-                Liberta l = new Liberta(new Kolo(), new Kolo(), new Ram(), new Sedlo());
+                Liberta l = new Liberta(new Zbozi(KOLO), new Zbozi(KOLO), new Zbozi(RAM), new Zbozi(SEDLO));
                 l.vypisTypVyrobku();
                 pocetVyrobku++;
                 }
