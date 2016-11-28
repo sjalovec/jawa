@@ -1,11 +1,13 @@
 //je potřeba upravit, až bude vyřešeno dvoukolo + kolo + iface + program
 package vyrobky;
 
+import zbozicko.Kolo;
+
 public class Liberta extends VyrobkyIface{
 
     private static final String typ_vyrobku = "Liberta";
     
-    public Liberta() {
+    public Liberta() { //dodelat doma ty pico
         super(TypVyrobku.LIBERTA);
         vypisTypVyrobku();
     }
