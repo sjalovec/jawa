@@ -1,9 +1,11 @@
 package zbozicko;
 
 public abstract class Zbozi { 
+    
     private TypZbozi zbozi = null;
-    public Zbozi(TypZbozi zbozi) {
-        this.zbozi = zbozi;
+    
+    public Zbozi(TypZbozi zboziVstup) {
+        this.zbozi = zboziVstup;
     }
     
     public TypZbozi getZbozi() {

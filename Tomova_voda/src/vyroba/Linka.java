@@ -1,3 +1,4 @@
+/*
 package vyroba;
 
 import storage.Sklad;
@@ -11,18 +12,17 @@ import zbozicko.Sedlo;
 import static zbozicko.TypZbozi.KOLO;
 import static zbozicko.TypZbozi.RAM;
 import static zbozicko.TypZbozi.SEDLO;
-import zbozicko.Zbozi;
 
 public class Linka {
     public static int pocetVyrobku = 0;
-    
+   
     public static void vyrobVyrobek(String vyrobek) throws RunOutOfGoodies {
         switch (vyrobek) {
             case "Liberta":
                 if (Sklad.dostatekZbozi("Liberta") == false) {
                     throw new RunOutOfGoodies();
                 } else {
-                Liberta l = new Liberta(new Zbozi(KOLO), new Zbozi(KOLO), new Zbozi(RAM), new Zbozi(SEDLO));
+                Liberta l = new Liberta(KOLO, KOLO, RAM, SEDLO);
                 l.vypisTypVyrobku();
                 pocetVyrobku++;
                 }
@@ -54,3 +54,6 @@ public class Linka {
         System.out.println("Je vyrobeno: "+pocetVyrobku+" ks výrobků.");
     }
 }
+
+
+*/

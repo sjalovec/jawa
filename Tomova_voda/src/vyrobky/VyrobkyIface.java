@@ -1,6 +1,13 @@
 package vyrobky;
 
-public interface VyrobkyIface {
+import zbozicko.TypZbozi;
+
+public abstract class VyrobkyIface {
+    private TypVyrobku vyrobek = null;
+    
+    public VyrobkyIface(TypVyrobku vyrobekVstup){
+        this.vyrobek = vyrobekVstup;
+    }
    
     public abstract void vypisText();
     
