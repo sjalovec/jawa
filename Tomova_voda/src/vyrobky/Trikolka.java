@@ -1,10 +1,14 @@
 package vyrobky;
 
+import zbozicko.Kolo;
+import zbozicko.Ram;
+import zbozicko.Sedlo;
+
 public class Trikolka extends VyrobkyIface {
 
     private static final String typ_vyrobku = "Trikolka";
 
-    public Trikolka() {
+    public Trikolka(Kolo kolo_predni, Kolo kolo_leve, Kolo kolo_prave, Ram ram, Sedlo sedlo) {
         super(TypVyrobku.TRIKOLKA);
         vypisTypVyrobku();
 

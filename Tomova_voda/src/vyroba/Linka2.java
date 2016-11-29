@@ -1,5 +1,5 @@
 package vyroba;
-
+//doplnit kontrolu na pocet zbozi na sklade pred voláním konstruktoru (nejlep jako metoda volana vstupní promenou)
 import vyrobky.Dvoukolo;
 import vyrobky.Liberta;
 import vyrobky.Trikolka;
@@ -17,10 +17,10 @@ public class Linka2 {
                 vyrobenyVyrobekzLinky = new Liberta(new Kolo(), new Kolo(), new Sedlo(), new Ram());
                 break;
             case DVOUKOLO:
-                vyrobenyVyrobekzLinky = new Dvoukolo();
+                vyrobenyVyrobekzLinky = new Dvoukolo(new Kolo(), new Kolo(), new Ram(), new Sedlo(), new Sedlo());
                 break;
             case TRIKOLKA:
-                vyrobenyVyrobekzLinky = new Trikolka();
+                vyrobenyVyrobekzLinky = new Trikolka(new Kolo(), new Kolo(), new Kolo(), new Ram(), new Sedlo());
             default:
                 System.out.println("vyber LIBERTA, DVOUKOLO nebo TRIKOLKA");
                 break;

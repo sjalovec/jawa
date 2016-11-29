@@ -1,10 +1,14 @@
 package vyrobky;
 
+import zbozicko.Kolo;
+import zbozicko.Ram;
+import zbozicko.Sedlo;
+
 public class Dvoukolo extends VyrobkyIface {
 
     private static final String typ_vyrobku = "Dvoukolo";
 
-    public Dvoukolo() {
+    public Dvoukolo(Kolo kolo_predni, Kolo kolo_zadni, Ram ram, Sedlo sedlo_predni, Sedlo sedlo_zadni) {
         super(TypVyrobku.DVOUKOLO);
         vypisTypVyrobku();
 
