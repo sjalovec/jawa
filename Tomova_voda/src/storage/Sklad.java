@@ -4,7 +4,7 @@ package storage;
 public class Sklad {
 
     //zatim konfigurace na Liberta
-    public static int pocetKolo = 2;
+    public static int pocetKolo = 3;
     public static int pocetSedlo = 1;
     public static int pocetRam = 1;
 
@@ -69,4 +69,18 @@ public class Sklad {
                 return false;
         }
     };
+    
+    public static int pocetKsObjednavky(String vstupZboziObj, String vstupVyrobekObj) {
+        switch(vstupZboziObj) {
+            case "kolo":
+                if (pocetKolo >= 2 && pocetSedlo >= 1 && pocetRam >= 1) {
+                    return 1;          
+                } else {
+                    return 1;
+                }
+           
+            default:
+                return 1;
+        }
+    }
 }
