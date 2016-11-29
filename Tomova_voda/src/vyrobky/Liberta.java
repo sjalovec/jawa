@@ -2,12 +2,14 @@
 package vyrobky;
 
 import zbozicko.Kolo;
+import zbozicko.Ram;
+import zbozicko.Sedlo;
 
 public class Liberta extends VyrobkyIface{
 
-    private static final String typ_vyrobku = "Liberta";
+    private static final String jmenoVyrobku = "Liberta";
     
-    public Liberta() { //dodelat doma ty pico
+    public Liberta(Kolo p_kolo, Kolo z_kolo, Sedlo l_sedlo, Ram l_ram) {
         super(TypVyrobku.LIBERTA);
         vypisTypVyrobku();
     }
@@ -19,6 +21,6 @@ public class Liberta extends VyrobkyIface{
 
     @Override
     public void vypisTypVyrobku() {
-        System.out.println("Vyrábím výrobek: " + typ_vyrobku);
+        System.out.println("Vyrábím výrobek: " + jmenoVyrobku);
     }
 }

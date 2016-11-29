@@ -6,6 +6,9 @@ import vyrobky.Liberta;
 import vyrobky.Trikolka;
 import vyrobky.TypVyrobku;
 import vyrobky.VyrobkyIface;
+import static zbozicko.TypZbozi.KOLO;
+import static zbozicko.TypZbozi.RAM;
+import static zbozicko.TypZbozi.SEDLO;
 
 public class Linka2 {
     public static VyrobkyIface vyrobVyrobek2(TypVyrobku model) {
