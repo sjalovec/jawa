@@ -1,21 +1,20 @@
 package vyroba;
 
-import storage.RunOutOfGoodies;
 import vyrobky.Dvoukolo;
 import vyrobky.Liberta;
 import vyrobky.Trikolka;
 import vyrobky.TypVyrobku;
 import vyrobky.VyrobkyIface;
-import static zbozicko.TypZbozi.KOLO;
-import static zbozicko.TypZbozi.RAM;
-import static zbozicko.TypZbozi.SEDLO;
+import zbozicko.Kolo;
+import zbozicko.Ram;
+import zbozicko.Sedlo;
 
 public class Linka2 {
     public static VyrobkyIface vyrobVyrobek2(TypVyrobku model) {
         VyrobkyIface vyrobenyVyrobekzLinky = null;
         switch(model) {
             case LIBERTA:
-                vyrobenyVyrobekzLinky = new Liberta();
+                vyrobenyVyrobekzLinky = new Liberta(new Kolo(), new Kolo(), new Sedlo(), new Ram());
                 break;
             case DVOUKOLO:
                 vyrobenyVyrobekzLinky = new Dvoukolo();
