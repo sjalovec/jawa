@@ -1,4 +1,3 @@
-//je potřeba upravit, až bude vyřešeno dvoukolo + kolo + iface + program
 package vyrobky;
 
 import zbozicko.Kolo;
@@ -8,8 +7,9 @@ import zbozicko.Sedlo;
 public class Liberta extends VyrobkyIface{
 
     private static final String jmenoVyrobku = "Liberta";
+   
     
-    public Liberta(Kolo p_kolo, Kolo z_kolo, Sedlo l_sedlo, Ram l_ram) {
+    public Liberta() {
         super(TypVyrobku.LIBERTA);
         vypisTypVyrobku();
     }

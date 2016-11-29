@@ -1,6 +1,6 @@
-
 package vyroba;
 
+import storage.RunOutOfGoodies;
 import vyrobky.Dvoukolo;
 import vyrobky.Liberta;
 import vyrobky.Trikolka;
@@ -12,22 +12,22 @@ import static zbozicko.TypZbozi.SEDLO;
 
 public class Linka2 {
     public static VyrobkyIface vyrobVyrobek2(TypVyrobku model) {
-        VyrobkyIface VIF = null;
+        VyrobkyIface vyrobenyVyrobekzLinky = null;
         switch(model) {
             case LIBERTA:
-                VIF = new Liberta();
+                vyrobenyVyrobekzLinky = new Liberta();
                 break;
             case DVOUKOLO:
-                VIF = new Dvoukolo();
+                vyrobenyVyrobekzLinky = new Dvoukolo();
                 break;
             case TRIKOLKA:
-                VIF = new Trikolka();
+                vyrobenyVyrobekzLinky = new Trikolka();
             default:
-                //tady bude chybovka
+                System.out.println("vyber LIBERTA, DVOUKOLO nebo TRIKOLKA");
                 break;
         }
             
-        return VIF;
+        return vyrobenyVyrobekzLinky;
     }
     
 }
