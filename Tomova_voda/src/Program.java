@@ -11,14 +11,14 @@ import vyrobky.TypVyrobku;
 public class Program {
 
     public static void main(String[] args) throws RunOutOfGoodies {
-        Sklad.stavZbozi("kolo");
-        Sklad.stavZbozi("ram");
-        Sklad.stavZbozi("sedlo");
+        Sklad.vypisStavZbozi("kolo");
+        Sklad.vypisStavZbozi("ram");
+        Sklad.vypisStavZbozi("sedlo");
         //vyroba.Linka.vyrobVyrobek("Liberta");
-        Linka2.vyrobVyrobek2(TypVyrobku.LIBERTA);
-        Sklad.stavZbozi("kolo");
-        Sklad.stavZbozi("ram");
-        Sklad.stavZbozi("sedlo");
+        Linka2.vyrobVyrobek2(TypVyrobku.TRIKOLKA);
+        Sklad.vypisStavZbozi("kolo");
+        Sklad.vypisStavZbozi("ram");
+        Sklad.vypisStavZbozi("sedlo");
         
         //Linka.pocetVyrobku();
 

@@ -4,10 +4,11 @@ package storage;
 public class Sklad {
 
     //zatim konfigurace na Liberta
-    public static int pocetKolo = 3;
+    public static int pocetKolo = 2;
+    public static int pocetRam = 0;
     public static int pocetSedlo = 1;
-    public static int pocetRam = 1;
-
+    
+    //metoda objednejZbozi neni potreba, nakonec se pouzila metoda stavZboziVypocet
     public static void objednejZbozi(String zbozi, int pocetKs) {
         switch (zbozi) {
             case "kolo":
@@ -28,7 +29,7 @@ public class Sklad {
         }
     };
     
-    public static void stavZbozi(String zbozi) {
+    public static void vypisStavZbozi(String zbozi) {
         switch (zbozi) {
             case "kolo":
                 System.out.println("Aktuálně je zboží " + zbozi + " na skladě: " + pocetKolo + " ks.");
@@ -45,22 +46,42 @@ public class Sklad {
         }
     };
     
+    public static void stavZboziVypocet(String vstupVyrobekObjZbozi) {
+        switch (vstupVyrobekObjZbozi) {
+            case "Liberta":
+                pocetKolo = pocetKolo + (2 - pocetKolo);
+                pocetSedlo = pocetSedlo + (1 - pocetSedlo);
+                pocetRam = pocetRam + (1 - pocetRam);
+                break;
+            case "Dvoukolo":
+                pocetKolo = pocetKolo + (2 - pocetKolo);
+                pocetSedlo = pocetSedlo + (2 - pocetSedlo);
+                pocetRam = pocetRam + (1 - pocetRam);
+                break;
+            case "Trikolka":
+                pocetKolo = pocetKolo + (3 - pocetKolo);
+                pocetSedlo = pocetSedlo + (1 - pocetSedlo);
+                pocetRam = pocetRam + (1 - pocetRam);
+                break;
+        }
+    };
+    
     public static boolean dostatekZbozi(String vstupZbozi) {
-        switch(vstupZbozi) {
+        switch (vstupZbozi) {
             case "Liberta":
                 if (pocetKolo >= 2 && pocetSedlo >= 1 && pocetRam >= 1) {
-                    return true;          
+                    return true;
                 } else {
                     return false;
                 }
             case "Dvoukolo":
-                if(pocetKolo >= 2 && pocetSedlo >= 2 && pocetRam >= 1){
+                if (pocetKolo >= 2 && pocetSedlo >= 2 && pocetRam >= 1) {
                     return true;
                 } else {
                     return false;
                 }
             case "Trikolka":
-                if(pocetKolo >= 3 && pocetSedlo >= 1 && pocetRam >= 1) {
+                if (pocetKolo >= 3 && pocetSedlo >= 1 && pocetRam >= 1) {
                     return true;
                 } else {
                     return false;
@@ -69,18 +90,4 @@ public class Sklad {
                 return false;
         }
     };
-    
-    public static int pocetKsObjednavky(String vstupZboziObj, String vstupVyrobekObj) {
-        switch(vstupZboziObj) {
-            case "kolo":
-                if (pocetKolo >= 2 && pocetSedlo >= 1 && pocetRam >= 1) {
-                    return 1;          
-                } else {
-                    return 1;
-                }
-           
-            default:
-                return 1;
-        }
-    }
 }
