@@ -8,20 +8,26 @@ public class Sklad {
     public static int pocetRam = 0;
     public static int pocetSedlo = 1;
     
-    //metoda objednejZbozi neni potreba, nakonec se pouzila metoda stavZboziVypocet
+    //metoda objednejZbozi neni potreba pro přídávání zboží, nakonec se pouzila metoda stavZboziVypocet
     public static void objednejZbozi(String zbozi, int pocetKs) {
         switch (zbozi) {
             case "kolo":
-                pocetKolo = pocetKolo + pocetKs;
+                //pocetKolo = pocetKolo + pocetKs;
+                if (pocetKs != 0) {
                 System.out.println("Bylo přidáno " + pocetKs + " ks zboží " + zbozi + " na sklad.");
+                }
                 break;
             case "sedlo":
-                pocetSedlo = pocetSedlo + pocetKs;
+                //pocetSedlo = pocetSedlo + pocetKs;
+                if (pocetKs != 0) {
                 System.out.println("Bylo přidáno " + pocetKs + " ks zboží " + zbozi + " na sklad.");
+                }
                 break;
             case "ram":
-                pocetRam = pocetRam + pocetKs;
+                //pocetRam = pocetRam + pocetKs;
+                if (pocetKs != 0) {
                 System.out.println("Bylo přidáno " + pocetKs + " ks zboží " + zbozi + " na sklad.");
+                }
                 break;
             default:
                 System.out.println("Nebylo zadáno správné zboží.");
@@ -49,9 +55,15 @@ public class Sklad {
     public static void stavZboziVypocet(String vstupVyrobekObjZbozi) {
         switch (vstupVyrobekObjZbozi) {
             case "Liberta":
-                pocetKolo = pocetKolo + (2 - pocetKolo);
-                pocetSedlo = pocetSedlo + (1 - pocetSedlo);
-                pocetRam = pocetRam + (1 - pocetRam);
+                int lib_kol = 2 - pocetKolo;
+                int lib_sed = 1 - pocetSedlo;
+                int lib_ram = 1 - pocetRam;
+                pocetKolo = pocetKolo + lib_kol;                
+                pocetSedlo = pocetSedlo + (lib_sed);
+                pocetRam = pocetRam + (lib_ram);
+                objednejZbozi("kolo", lib_kol);
+                objednejZbozi("sedlo", lib_sed);
+                objednejZbozi("ram", lib_ram);
                 break;
             case "Dvoukolo":
                 pocetKolo = pocetKolo + (2 - pocetKolo);

@@ -15,7 +15,7 @@ public class Program {
         Sklad.vypisStavZbozi("ram");
         Sklad.vypisStavZbozi("sedlo");
         //vyroba.Linka.vyrobVyrobek("Liberta");
-        Linka2.vyrobVyrobek2(TypVyrobku.TRIKOLKA);
+        Linka2.vyrobVyrobek2(TypVyrobku.LIBERTA);
         Sklad.vypisStavZbozi("kolo");
         Sklad.vypisStavZbozi("ram");
         Sklad.vypisStavZbozi("sedlo");
