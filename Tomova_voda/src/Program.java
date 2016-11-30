@@ -20,7 +20,7 @@ public class Program {
         Sklad.vypisStavZbozi("ram");
         Sklad.vypisStavZbozi("sedlo");
         
-        //Linka.pocetVyrobku();
+        Linka2.pocetVyrobku();
 
     }
 
