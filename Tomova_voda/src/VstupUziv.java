@@ -26,4 +26,22 @@ public class VstupUziv {
         }
         return null;
     }
+    
+    public static boolean rozhodnutiVyroba() {
+        System.out.println("Pokračovat ve výrobě? (A/N)");
+        Scanner sc2 = new Scanner(System.in);
+        String vyberVyroba = sc2.nextLine();
+        switch(vyberVyroba) {
+            case("Y"):
+                return true;
+            case("A"):
+                return true;
+            case("N"):
+                return false;
+            default:
+                System.out.println("nebylo vybráno správně.");
+                break;
+        }
+       return false; 
+    };
 }
