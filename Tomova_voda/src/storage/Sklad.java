@@ -66,14 +66,26 @@ public class Sklad {
                 objednejZbozi("ram", lib_ram);
                 break;
             case "Dvoukolo":
-                pocetKolo = pocetKolo + (2 - pocetKolo);
-                pocetSedlo = pocetSedlo + (2 - pocetSedlo);
-                pocetRam = pocetRam + (1 - pocetRam);
+                int dv_kol = 2 - pocetKolo;
+                int dv_sed = 2 - pocetSedlo;
+                int dv_ram = 1 - pocetRam;
+                pocetKolo = pocetKolo + dv_kol;
+                pocetSedlo = pocetSedlo + dv_sed;
+                pocetRam = pocetRam + dv_ram;
+                objednejZbozi("kolo", dv_kol);
+                objednejZbozi("sedlo", dv_sed);
+                objednejZbozi("ram", dv_ram);
                 break;
             case "Trikolka":
-                pocetKolo = pocetKolo + (3 - pocetKolo);
-                pocetSedlo = pocetSedlo + (1 - pocetSedlo);
-                pocetRam = pocetRam + (1 - pocetRam);
+                int tr_kol = 3 - pocetKolo;
+                int tr_sed = 1 - pocetSedlo;
+                int tr_ram = 1 - pocetRam;
+                pocetKolo = pocetKolo + tr_kol;
+                pocetSedlo = pocetSedlo + tr_sed;
+                pocetRam = pocetRam + tr_ram;
+                objednejZbozi("kolo", tr_kol);
+                objednejZbozi("sedlo", tr_sed);
+                objednejZbozi("ram", tr_ram);
                 break;
         }
     };
