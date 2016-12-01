@@ -39,7 +39,7 @@ public class VstupUziv {
             case("N"):
                 return false;
             default:
-                System.out.println("nebylo vybráno správně.");
+                System.out.println("Nebylo vybráno správně, ukončuji program.");
                 break;
         }
        return false; 
