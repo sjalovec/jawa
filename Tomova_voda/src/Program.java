@@ -4,9 +4,7 @@
 
 import storage.Sklad;
 import storage.RunOutOfGoodies;
-//import vyroba.Linka;
 import vyroba.Linka2;
-import vyrobky.TypVyrobku;
 
 public class Program {
 
@@ -16,7 +14,6 @@ public class Program {
         Sklad.vypisStavZbozi("kolo");
         Sklad.vypisStavZbozi("ram");
         Sklad.vypisStavZbozi("sedlo");
-        //vyroba.Linka.vyrobVyrobek("Liberta");
         Linka2.vyrobVyrobek2(VstupUziv.vratVyber());
         //Linka2.vyrobVyrobek2(TypVyrobku.LIBERTA);
         Sklad.vypisStavZbozi("kolo");
