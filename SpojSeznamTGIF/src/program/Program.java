@@ -5,6 +5,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -28,9 +29,9 @@ public class Program {
             case(2):
                 System.out.println("Vybrals 2");
                 BufferedReader in2 = new BufferedReader(new FileReader("d:/soubor.txt"));
-                List<String> mujArrayList2 = new ArrayList<String>();
-                mujArrayList2.add(in2.readLine());
-                System.out.println(mujArrayList2);
+                List<String> mujLinkedList = new LinkedList<String>();
+                mujLinkedList.add(in2.readLine());
+                System.out.println(mujLinkedList);
                 break;
             default:
                 System.out.println("Vybrals na kokot.");
