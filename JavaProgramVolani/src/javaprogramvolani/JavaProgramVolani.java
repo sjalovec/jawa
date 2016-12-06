@@ -11,8 +11,8 @@ import java.util.List;
 public class JavaProgramVolani {
 
     public static void main(String[] args) throws IOException {
-        //MyLinkedList.myLinkedListMethod();
-        //MyArrayList.myArrayListMethod();
+        MyLinkedList.myLinkedListMethod();
+        MyArrayList.myArrayListMethod();
     }
 
     static class MyLinkedList {
