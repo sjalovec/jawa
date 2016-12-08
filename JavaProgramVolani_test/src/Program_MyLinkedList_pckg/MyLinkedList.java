@@ -1,4 +1,4 @@
-package javaprogramvolani;
+package Program_MyLinkedList_pckg;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -8,14 +8,14 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
-public class JavaProgramVolani {
+public class MyLinkedList {
 
     public static void main(String[] args) throws IOException {
-        MyLinkedList.myLinkedListMethod();
+        MyLinkedListSubClass.myLinkedListMethod();
         //MyArrayList.myArrayListMethod();
     }
 
-    static class MyLinkedList {
+    static class MyLinkedListSubClass {
 
         public static void myLinkedListMethod() throws FileNotFoundException, IOException {
             BufferedReader BR = new BufferedReader(new FileReader("d:/soubor.txt"));
@@ -37,4 +37,4 @@ public class JavaProgramVolani {
 }
 
 
-//C:\Users\P3401971\My Documents\NetBeansProjects\JavaProgramVolani\dist>java -jar JavaProgramVolani.jar
+//C:\Users\P3401971\My Documents\NetBeansProjects\MyLinkedList\dist>java -jar MyLinkedList.jar
