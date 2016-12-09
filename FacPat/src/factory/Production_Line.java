@@ -3,6 +3,7 @@ package factory;
 import products.Dvoukolo;
 import products.Liberta;
 import products.Product_Iface;
+import products.Trikolka;
 
 public class Production_Line {
     public Product_Iface getProductType(String productType){
@@ -14,7 +15,10 @@ public class Production_Line {
         }
         else if(productType.equalsIgnoreCase("DVOUKOLO")){
             return new Dvoukolo();
-        }               
+        }
+        else if(productType.equalsIgnoreCase("TRIKOLKA")){
+            return new Trikolka();                   
+        }
         return null; 
     }
 }

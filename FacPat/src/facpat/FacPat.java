@@ -13,3 +13,8 @@ public class FacPat {
     }
     
 }
+/*
+jakože shapeFactory akorat urcuje jaka linka se bude pouzivat?
+a pak tam mas konkrítní 3 linky, který maj napsany, co presne delaj
+-ano
+*/
