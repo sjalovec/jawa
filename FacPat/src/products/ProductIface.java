@@ -1,5 +1,5 @@
 package products;
 
-public interface Product_Iface {
+public interface ProductIface {
     void manufacture_product();
 }

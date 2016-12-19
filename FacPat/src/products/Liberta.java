@@ -4,7 +4,7 @@ import goods.Kolo;
 import goods.Ram;
 import goods.Sedlo;
 
-public class Liberta implements Product_Iface{
+public class Liberta implements ProductIface{
     @Override
     public void manufacture_product(){
         System.out.println("Jsem v liberta.");
