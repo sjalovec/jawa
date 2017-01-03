@@ -23,21 +23,21 @@ public class FacPat {
             int vyber = sc.nextInt();
             switch (vyber) {
                 case (1):
-                    System.out.println("Výběr: " + vyber);
+                    System.out.println("Výběr: " + vyber + " Liberta");
 
                     ProductionLineDef PL_Liberta = new ProductionLineDef();
                     ProductIface PI_Liberta = PL_Liberta.getProductType("Liberta"); //WTF konstrukce
                     PI_Liberta.manufacture_product();
                     break;
                 case (2):
-                    System.out.println("Výběr: " + vyber);
+                    System.out.println("Výběr: " + vyber + " Dvoukolo");
 
                     ProductionLineDef PL_Dvoukolo = new ProductionLineDef();
                     ProductIface PI_Dvoukolo = PL_Dvoukolo.getProductType("Dvoukolo");
                     PI_Dvoukolo.manufacture_product();
                     break;
                 case (3):
-                    System.out.println("Výběr: " + vyber);
+                    System.out.println("Výběr: " + vyber + " Trikolka");
 
                     ProductionLineDef PL_Trikolka = new ProductionLineDef();
                     ProductIface PI_Trikolka = PL_Trikolka.getProductType("Trikolka");
