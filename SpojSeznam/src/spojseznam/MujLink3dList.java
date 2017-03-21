@@ -25,5 +25,8 @@ public class MujLink3dList implements listIface{
             this.first.next = n;
         }
     };
+    public void remove(int i){
+        
+    };
 }
     
