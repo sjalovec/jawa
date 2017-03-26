@@ -3,6 +3,7 @@ package spojseznam;
 public class MujLink3dList implements listIface{
     private UzelNode first;
     private int size;
+    private UzelNode nextNode;
     
     public MujLink3dList(){
         this.size = 0;
@@ -19,10 +20,12 @@ public class MujLink3dList implements listIface{
         UzelNode n = new UzelNode(i);
         if (size==0){
             this.first = n;
+            this.nextNode = n;
         }
         else
         {
             this.first.next = n;
+            this.nextNode = n;
         }
     };
     public void remove(int i){
