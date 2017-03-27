@@ -2,6 +2,7 @@ package spojseznam;
 
 public class MujLink3dList implements listIface{
     private UzelNode first;
+    private UzelNode last;
     private int size;
     private UzelNode nextNode;
     
@@ -17,19 +18,29 @@ public class MujLink3dList implements listIface{
         }
     }
     public void add(int i){
-        UzelNode n = new UzelNode(i);
+        UzelNode un = new UzelNode(i);
         if (size==0){
-            this.first = n;
-            this.nextNode = n;
+            this.first = un;
+            this.last = un;
         }
         else
         {
-            this.first.next = n;
-            this.nextNode = n;
+            this.last.next = un; //whaaaaaaat?!
+            this.last = un;
         }
+        size++;
     };
-    public void remove(int i){
-        
+    public int get(int i){
+        if (i > size) {
+            throw new IndexOutOfBoundsException("\n\nChyba, index: " + i + " je větší než velikost: " + size+ "\n");
+        }
+        if (i < 0) {
+            throw new IllegalArgumentException("\n\nChyba, index je mensi nez nula\n");
+        }
+        for (int j = 0; j++; j < i){
+            UzelNode k = first;
+        }
+        return 0;
     };
 }
     
