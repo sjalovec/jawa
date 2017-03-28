@@ -8,6 +8,6 @@ public interface listIface {
     //vrátí prvek na indexu i
     public int get(int i);
     //vrátí velikot seznamu
-    //public int size();
+    public int size();
    
 }

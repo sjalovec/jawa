@@ -37,10 +37,14 @@ public class MujLink3dList implements listIface{
         if (i < 0) {
             throw new IllegalArgumentException("\n\nChyba, index je mensi nez nula\n");
         }
-        for (int j = 0; j++; j < i){
-            UzelNode k = first;
+        UzelNode k = first;
+        for (int j = 0; j < i;j++){
+            k = k.next; //proc tady není k = this.last.next???
         }
-        return 0;
+        return k.value;
     };
+    public int size(){
+        return size;
+    }
 }
     
