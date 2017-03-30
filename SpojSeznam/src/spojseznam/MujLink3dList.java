@@ -47,12 +47,17 @@ public class MujLink3dList implements listIface{
         return size;
     }
     public void remove(int i){
-          if (i > size) {
+        if (i > size) {
             throw new IndexOutOfBoundsException("\n\nChyba, index: " + i + " je větší než velikost: " + size+ "\n");
         }
         if (i < 0) {
             throw new IllegalArgumentException("\n\nChyba, index je mensi nez nula\n");
         }
+        UzelNode l = new UzelNode(i);
+        //int l = new UzelNode(i);
+        //UzelNode l = l.value;
+        
+        
     };
 }
     
