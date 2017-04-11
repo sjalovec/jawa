@@ -53,11 +53,18 @@ public class MujLink3dList implements listIface{
         if (i < 0) {
             throw new IllegalArgumentException("\n\nChyba, index je mensi nez nula\n");
         }
-        UzelNode l = new UzelNode(i);
+        if (i == 0){
+            first = first.next;
+        }
+        else {
+        UzelNode un = first;
+           
+        }
+        size--; 
+        //UzelNode l = new UzelNode(i);
         //int l = new UzelNode(i);
         //UzelNode l = l.value;
-        
-        
+           
     };
 }
     
