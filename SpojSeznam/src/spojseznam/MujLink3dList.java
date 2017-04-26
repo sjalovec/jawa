@@ -41,7 +41,7 @@ public class MujLink3dList implements listIface{
         for (int j = 0; j < i;j++){
             un = un.next; //ulozi pointer na dalsi (next)
         }
-        return un.value;
+        return un.value; //tohle vrati hodnotu
     };
     public int size(){
         return size;
