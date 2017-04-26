@@ -25,7 +25,7 @@ public class MujLink3dList implements listIface{
         }
         else
         {
-            this.last.next = un; //whaaaaaaat?!
+            this.last.next = un; //prida dalsi pointer za posledni v listu
             this.last = un;
         }
         size++;
@@ -37,11 +37,11 @@ public class MujLink3dList implements listIface{
         if (i < 0) {
             throw new IllegalArgumentException("\n\nChyba, index je mensi nez nula\n");
         }
-        UzelNode k = first;
+        UzelNode un = first;
         for (int j = 0; j < i;j++){
-            k = k.next; //proc tady není k = this.last.next???
+            un = un.next; //ulozi pointer na dalsi (next)
         }
-        return k.value;
+        return un.value;
     };
     public int size(){
         return size;
@@ -57,14 +57,22 @@ public class MujLink3dList implements listIface{
             first = first.next;
         }
         else {
-        UzelNode un = first;
-           
+        int foo = 0;
+        UzelNode fou = first;
+        for (int j = 0; j < i; j++){
+            //System.out.println(this.first.value); //první HODNOTA z listu, nepotřebuju, index bude alespoň 1
+            //System.out.println(this.first.next.value); //následující HODNOTA za první (tzn. druhá)
+            //foo = this.first.next.value;
+            fou = fou.next;
+            //System.out.println(this.last.value); //poslední HODNOTA z listu
+            //System.out.println(this.last.next.value); //spadne na nullpointer - jsem mimo list
+            //System.out.println(this.nextNode.next.next.value); //blbost
+            //System.out.println(foo);
+            System.out.println(fou.value);
         }
-        size--; 
-        //UzelNode l = new UzelNode(i);
-        //int l = new UzelNode(i);
-        //UzelNode l = l.value;
-           
+            System.out.println(fou.next.value);
+        }
+        size--;           
     };
 }
     

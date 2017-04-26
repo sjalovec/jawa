@@ -10,9 +10,9 @@ public class SpojSeznam {
         ml.add(3); //int 3 na pozici 3
         ml.add(4); // int 4 na pozici 4
         //ml.get(1);
-       //ml.remove(0);
-        System.out.println(ml.get(2)); //mělo by vrátit 2
-        System.out.println(ml.size());
+        ml.remove(3);
+        //System.out.println(ml.get(2)); //mělo by vrátit 2
+        //System.out.println(ml.size());
         
     }
     
