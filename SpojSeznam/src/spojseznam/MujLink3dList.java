@@ -59,18 +59,26 @@ public class MujLink3dList implements listIface{
         else {
         int foo = 0;
         UzelNode fou = first;
-        for (int j = 0; j < i; j++){
+        for (int j = 0; j < i-1; j++){
             //System.out.println(this.first.value); //první HODNOTA z listu, nepotřebuju, index bude alespoň 1
             //System.out.println(this.first.next.value); //následující HODNOTA za první (tzn. druhá)
             //foo = this.first.next.value;
-            fou = fou.next;
+            fou = fou.next;            
             //System.out.println(this.last.value); //poslední HODNOTA z listu
             //System.out.println(this.last.next.value); //spadne na nullpointer - jsem mimo list
             //System.out.println(this.nextNode.next.next.value); //blbost
             //System.out.println(foo);
             System.out.println(fou.value);
         }
-            System.out.println(fou.next.value);
+        fou = fou.next;
+        for (int k = 0;k<size-i;k++) {
+            System.out.println("hodnota fou po posunu mimo cyklus "+fou.value);
+            System.out.println("jaka je posledni hodnota(last) "+this.last.value);
+            fou = fou.next;
+            //System.out.println(this.last.next.value); // jeste neexistuje žádná hodnota
+            //this.last.next = fou; //tohle prida promenou nakonec list
+            System.out.println("kolik je last? "+this.last.value);
+        }   
         }
         size--;           
     };
