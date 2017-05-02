@@ -67,17 +67,21 @@ public class MujLink3dList implements listIface{
             //System.out.println(this.last.next.value); //spadne na nullpointer - jsem mimo list
             //System.out.println(this.nextNode.next.next.value); //blbost
             //System.out.println(foo);
-            System.out.println(fou.value);
+            //System.out.println(fou.value);
         }
-        fou = fou.next;
-                    System.out.println("hodnota fou po posunu mimo cyklus "+fou.value);
+        fou.next = fou.next.next;
+                    //System.out.println("hodnota fou po posunu mimo cyklus "+fou.value);
+                    //System.out.println("hodnota fou po posunu mimo cyklus "+fou.next.value);
+                    //System.out.println("hodnota fou po posunu mimo cyklus "+fou.next.next.value);
+         /*           
         for (int k = 0;k<size-i;k++) {
             System.out.println("jaka je posledni hodnota(last) "+this.last.value);
             fou = fou.next;
             //System.out.println(this.last.next.value); // jeste neexistuje žádná hodnota
             //this.last.next = fou; //tohle prida promenou nakonec list
             System.out.println("kolik je last? "+this.last.value);
-        }   
+        } 
+        */
         }
         size--;           
     };
