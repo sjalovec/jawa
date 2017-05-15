@@ -9,5 +9,7 @@ public interface listIface {
     public int get(int i);
     //vrátí velikot seznamu
     public int size();
+    //vloží prvek na konkréní index
+    public void insertAt(int i, int j);
    
 }
