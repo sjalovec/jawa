@@ -11,5 +11,6 @@ public interface listIface {
     public int size();
     //vloží prvek na konkréní index
     public void insertAt(int i, int j);
-   
+   //vloží prvek za napsany index
+    public void insertAfter(int i, int j);
 }

@@ -106,5 +106,25 @@ public class MujLink3dList implements listIface{
             //System.out.println("uzlik.value "+uzlik.value);
         }
     };
+    public void insertAfter(int i, int j)
+    {
+        UzelNode uzlicek = new UzelNode(j);
+        int test;
+        System.out.print("hodnota na poslednim miste: ");
+        System.out.println(test = this.last.value);
+        //System.out.println(test = this.last.next.value);
+        if (i > size) {
+            throw new IndexOutOfBoundsException("\n\nChyba, index: " + i + " je větší než velikost: " + size+ "\n");
+        }
+        if (i < 0) {
+            throw new IllegalArgumentException("\n\nChyba, index je mensi nez nula\n");
+        }
+        if (i == size) {
+            
+            this.last.next = uzlicek;           
+            
+        }
+        size++;
+    }
 }
     
