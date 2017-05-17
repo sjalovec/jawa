@@ -108,11 +108,9 @@ public class MujLink3dList implements listIface{
     };
     public void insertAfter(int i, int j)
     {
+        UzelNode uzlousek = first;
         UzelNode uzlicek = new UzelNode(j);
-        int test;
         System.out.print("hodnota na poslednim miste: ");
-        System.out.println(test = this.last.value);
-        //System.out.println(test = this.last.next.value);
         if (i > size) {
             throw new IndexOutOfBoundsException("\n\nChyba, index: " + i + " je větší než velikost: " + size+ "\n");
         }
@@ -121,10 +119,14 @@ public class MujLink3dList implements listIface{
         }
         if (i == size) {
             
-            this.last.next = uzlicek;           
-            
+            this.last.next = uzlicek; 
+            size++;
         }
-        size++;
+        else {
+            for(int k = 0;k<i-1;k++){
+                uzlousek = uzlousek.next;
+            }
+        }
     }
 }
     
