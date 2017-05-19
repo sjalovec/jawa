@@ -128,16 +128,17 @@ public class MujLink3dList implements listIface {
             this.last.next = uzlicek;
             size++;
         } else {
-            for (int k = 0; k < i - 1; k++) {
+            for (int k = 0; k < i; k++) {
                 uzlousek = uzlousek.next;
             }
-            System.out.println("hodnota z cyklu: "+uzlousek.value);
-            System.out.println("hodnota uzlousek.next.value: "+uzlousek.next.value);
+            //System.out.println("hodnota z cyklu: "+uzlousek.value);
+            //System.out.println("hodnota uzlousek.next.value: "+uzlousek.next.value);
             helpuzel = uzlousek.value;
             uzlousek.value = j; 
             uzlousek.next.value = helpuzel;
             //uzlousek.next = uzlousek.next.next;
-            System.out.println("hodnota uzlousku: " + uzlousek.value);
+            //System.out.println("hodnota uzlousku: " + uzlousek.value);
+            //uzlousek.next = uzlousek;
             size++;
         }
     }

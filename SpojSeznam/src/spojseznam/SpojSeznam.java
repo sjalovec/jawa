@@ -21,8 +21,9 @@ public class SpojSeznam {
         System.out.println("hodnota na indexu 0: "+ml.get(0));
         System.out.println("Hodnota na indexu 1: "+ml.get(1));
         System.out.println("hodnota na indexu 2: "+ml.get(2));
-        System.out.println("Velikost listu: "+ml.size());
-        ml.insertAfter(3, 99);
+        System.out.println("hodnota na indexu 3: "+ml.get(3));
+        //System.out.println("Velikost listu: "+ml.size());
+        ml.insertAfter(2, 99);
         System.out.println(ml.get(0));
         System.out.println(ml.get(1));
         System.out.println(ml.get(2));
