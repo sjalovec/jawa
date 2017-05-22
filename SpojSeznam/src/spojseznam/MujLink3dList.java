@@ -91,8 +91,8 @@ public class MujLink3dList implements listIface {
         size--;
     }
 
-    
     public void insertAt(int i, int j) {
+        System.out.println("Nastavuji hodnotu " + j + " na index " + i);
         UzelNode uzlik = first;
         if (i > size) {
             throw new IndexOutOfBoundsException("\n\nChyba, index: " + i + " je větší než velikost: " + size + "\n");
@@ -111,8 +111,9 @@ public class MujLink3dList implements listIface {
             //System.out.println("uzlik.value "+uzlik.value);
         }
     }
-    
+
     public void insertAfter(int i, int j) {
+        System.out.println("Nastavuji hodnotu " + j + " za index " + i);
         int helpuzel;
         UzelNode uzlousek = first;
         UzelNode uzlicek = new UzelNode(j);
@@ -128,14 +129,17 @@ public class MujLink3dList implements listIface {
             this.last.next = uzlicek;
             size++;
         } else {
-            for (int k = 0; k < i; k++) {
+            for (int k = 0; k < i+1; k++) {
                 uzlousek = uzlousek.next;
             }
             //System.out.println("hodnota z cyklu: "+uzlousek.value);
             //System.out.println("hodnota uzlousek.next.value: "+uzlousek.next.value);
-            helpuzel = uzlousek.value;
-            uzlousek.value = j; 
-            uzlousek.next.value = helpuzel;
+            //for (int l = i; l < size; l++) {
+                helpuzel = uzlousek.value;
+                uzlousek.value = j;
+                uzlousek.next.value = helpuzel;
+            //}
+
             //uzlousek.next = uzlousek.next.next;
             //System.out.println("hodnota uzlousku: " + uzlousek.value);
             //uzlousek.next = uzlousek;

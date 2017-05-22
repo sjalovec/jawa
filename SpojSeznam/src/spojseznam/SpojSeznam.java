@@ -10,18 +10,19 @@ public class SpojSeznam {
         ml.add(3); //int 3 na pozici 3
         ml.add(4); //int 4 na pozici 4
         ml.add(5); //int 5 na pozici 5
-        System.out.println("velikost listu pred remove: "+ml.size());
+        System.out.println("Velikost listu pred remove: "+ml.size());
         ml.remove(3);
         //System.out.println("hodnota na indexu 2: "+ml.get(2)); //mělo by vrátit 2
-        System.out.println("hodnota na indexu 3: "+ml.get(3)); //mělo by vrátit 4
+        System.out.println("Hodnota na indexu 3: "+ml.get(3)); //mělo by vrátit 4
         System.out.println("Velikost listu po remove: "+ml.size());
         
-        System.out.println("Nastavuji hodnotu 10 na index 2");
+        
         ml.insertAt(2, 10);
         System.out.println("hodnota na indexu 0: "+ml.get(0));
         System.out.println("Hodnota na indexu 1: "+ml.get(1));
-        System.out.println("hodnota na indexu 2: "+ml.get(2));
-        System.out.println("hodnota na indexu 3: "+ml.get(3));
+        System.out.println("Hodnota na indexu 2: "+ml.get(2));
+        System.out.println("Hodnota na indexu 3: "+ml.get(3));
+        System.out.println("Hodnota na indexu 4: "+ml.get(4));
         //System.out.println("Velikost listu: "+ml.size());
         ml.insertAfter(2, 99);
         System.out.println(ml.get(0));
@@ -30,7 +31,7 @@ public class SpojSeznam {
         System.out.println(ml.get(3));
         System.out.println(ml.get(4));
         //System.out.println(ml.get(5));
-        System.out.println("velikost listu " +ml.size());
+        System.out.println("Velikost listu " +ml.size());
       
     }
     
