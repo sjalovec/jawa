@@ -46,7 +46,6 @@ public class MujLink3dList implements listIface {
         return un.value; //tohle vrati hodnotu
     }
 
-    ;
     public int size() {
         return size;
     }
@@ -75,24 +74,12 @@ public class MujLink3dList implements listIface {
                 //System.out.println(fou.value);
             }
             fou.next = fou.next.next;
-            //System.out.println("hodnota fou po posunu mimo cyklus "+fou.value);
-            //System.out.println("hodnota fou po posunu mimo cyklus "+fou.next.value);
-            //System.out.println("hodnota fou po posunu mimo cyklus "+fou.next.next.value);
-            /*           
-        for (int k = 0;k<size-i;k++) {
-            System.out.println("jaka je posledni hodnota(last) "+this.last.value);
-            fou = fou.next;
-            //System.out.println(this.last.next.value); // jeste neexistuje žádná hodnota
-            //this.last.next = fou; //tohle prida promenou nakonec list
-            System.out.println("kolik je last? "+this.last.value);
-        } 
-             */
         }
         size--;
     }
 
     public void insertAt(int i, int j) {
-        System.out.println("Nastavuji hodnotu " + j + " na index " + i);
+        System.out.println("V metodě insertAt nastavuji hodnotu " + j + " na index " + i);
         UzelNode uzlik = first;
         if (i > size) {
             throw new IndexOutOfBoundsException("\n\nChyba, index: " + i + " je větší než velikost: " + size + "\n");
@@ -115,6 +102,8 @@ public class MujLink3dList implements listIface {
     public void insertAfter(int i, int j) {
         System.out.println("Nastavuji hodnotu " + j + " za index " + i);
         int helpuzel;
+        int helpuzel2;
+        int helpuzel3;
         UzelNode uzlousek = first;
         UzelNode uzlicek = new UzelNode(j);
         //System.out.print("hodnota na poslednim miste: ");
@@ -129,20 +118,25 @@ public class MujLink3dList implements listIface {
             this.last.next = uzlicek;
             size++;
         } else {
-            for (int k = 0; k < i+1; k++) {
+            for (int k = 0; k < i + 1; k++) {
                 uzlousek = uzlousek.next;
             }
-            //System.out.println("hodnota z cyklu: "+uzlousek.value);
-            //System.out.println("hodnota uzlousek.next.value: "+uzlousek.next.value);
-            //for (int l = i; l < size; l++) {
-                helpuzel = uzlousek.value;
-                uzlousek.value = j;
-                uzlousek.next.value = helpuzel;
-            //}
 
-            //uzlousek.next = uzlousek.next.next;
-            //System.out.println("hodnota uzlousku: " + uzlousek.value);
-            //uzlousek.next = uzlousek;
+            helpuzel = uzlousek.value;
+            //helpuzel == 10;
+            uzlousek.value = j;
+            //uzlousek.value == 99  
+            helpuzel2 = uzlousek.next.value;
+            //helpuzel2 == 4;
+            helpuzel3 = uzlousek.next.next.value;          
+            //helpuzel3 == 5;
+            uzlousek.next.value = helpuzel;
+            uzlousek.next.next.value = helpuzel2;
+            this.last.next.value = helpuzel3;
+            //uzlousek.next.next.next.value = helpuzel3;
+            //System.out.println("uzlousek hodnota: "+uzlousek.value);
+
+            //helpuzel = uzlousek.next.value;
             size++;
         }
     }

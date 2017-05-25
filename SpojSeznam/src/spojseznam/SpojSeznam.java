@@ -15,7 +15,7 @@ public class SpojSeznam {
         //System.out.println("hodnota na indexu 2: "+ml.get(2)); //mělo by vrátit 2
         System.out.println("Hodnota na indexu 3: "+ml.get(3)); //mělo by vrátit 4
         System.out.println("Velikost listu po remove: "+ml.size());
-        
+        System.out.println("");
         
         ml.insertAt(2, 10);
         System.out.println("hodnota na indexu 0: "+ml.get(0));
@@ -24,7 +24,9 @@ public class SpojSeznam {
         System.out.println("Hodnota na indexu 3: "+ml.get(3));
         System.out.println("Hodnota na indexu 4: "+ml.get(4));
         //System.out.println("Velikost listu: "+ml.size());
-        ml.insertAfter(2, 99);
+        System.out.println("");
+        
+        ml.insertAfter(1, 99);
         System.out.println(ml.get(0));
         System.out.println(ml.get(1));
         System.out.println(ml.get(2));
