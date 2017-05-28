@@ -100,10 +100,11 @@ public class MujLink3dList implements listIface {
     }
 
     public void insertAfter(int i, int j) {
+        System.out.println("Velikost pole je: "+size);
         System.out.println("Nastavuji hodnotu " + j + " za index " + i);
-        int helpuzel;
+        UzelNode helpuzel;
         int helpuzel2;
-        int helpuzel3;
+        UzelNode helpuzel3;
         UzelNode uzlousek = first;
         UzelNode uzlicek = new UzelNode(j);
         //System.out.print("hodnota na poslednim miste: ");
@@ -118,26 +119,28 @@ public class MujLink3dList implements listIface {
             this.last.next = uzlicek;
             size++;
         } else {
+            //System.out.println("posledni hodnota pres this: "+this.last.value);
+            //helpuzel = this.last;
+            //this.last.next = helpuzel;
+            
             for (int k = 0; k < i + 1; k++) {
                 uzlousek = uzlousek.next;
             }
-
-            helpuzel = uzlousek.value;
-            //helpuzel == 10;
+            System.out.println("uzlousek hodnota: "+uzlousek.value);
+            //prehozeni hodnoty se musi udelat pres value jinak se to cely posere
+            helpuzel = uzlousek;
+            
             uzlousek.value = j;
-            //uzlousek.value == 99  
-            helpuzel2 = uzlousek.next.value;
-            //helpuzel2 == 4;
-            helpuzel3 = uzlousek.next.next.value;          
-            //helpuzel3 == 5;
-            uzlousek.next.value = helpuzel;
-            uzlousek.next.next.value = helpuzel2;
-            this.last.next.value = helpuzel3;
-            //uzlousek.next.next.next.value = helpuzel3;
-            //System.out.println("uzlousek hodnota: "+uzlousek.value);
-
-            //helpuzel = uzlousek.next.value;
-            size++;
+            
+            uzlousek.next = helpuzel;
+            /*
+            
+            for (int l = 0; l < size-1; l++){
+            //uzlousek = uzlousek.next;
+            uzlousek = uzlousek.next.next;
+            }
+*/
+            //size++;
         }
     }
 }
