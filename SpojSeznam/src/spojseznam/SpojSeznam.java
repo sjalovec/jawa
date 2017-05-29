@@ -32,7 +32,7 @@ public class SpojSeznam {
         System.out.println(ml.get(2));
         System.out.println(ml.get(3));
         System.out.println(ml.get(4));
-        //System.out.println(ml.get(5));
+        System.out.println(ml.get(5));
         //System.out.println(ml.get(6));
         //System.out.println(ml.get(7));
         System.out.println("Velikost listu " +ml.size());

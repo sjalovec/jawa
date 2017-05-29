@@ -123,24 +123,18 @@ public class MujLink3dList implements listIface {
             //helpuzel = this.last;
             //this.last.next = helpuzel;
             
-            for (int k = 0; k < i + 1; k++) {
+            for (int k = 0; k < i; k++) {
                 uzlousek = uzlousek.next;
             }
             System.out.println("uzlousek hodnota: "+uzlousek.value);
             //prehozeni hodnoty se musi udelat pres value jinak se to cely posere
-            helpuzel = uzlousek;
             
-            uzlousek.value = j;
+            helpuzel = uzlousek.next;
+            uzlicek.next = helpuzel; //bez toho nextu se to cely posere
+            uzlousek.next = uzlicek;
             
-            uzlousek.next = helpuzel;
-            /*
-            
-            for (int l = 0; l < size-1; l++){
-            //uzlousek = uzlousek.next;
-            uzlousek = uzlousek.next.next;
-            }
-*/
-            //size++;
+
+            size++;
         }
     }
 }
