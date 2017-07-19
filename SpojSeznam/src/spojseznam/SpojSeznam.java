@@ -26,7 +26,7 @@ public class SpojSeznam {
         //System.out.println("Velikost listu: "+ml.size());
         System.out.println("");
         
-        ml.insertAfter(2, 99);
+        ml.insertAfter(5, 99);
         System.out.println(ml.get(0));
         System.out.println(ml.get(1));
         System.out.println(ml.get(2));
