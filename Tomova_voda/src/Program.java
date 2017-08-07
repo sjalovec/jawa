@@ -24,7 +24,7 @@ public class Program {
 
             //volání na opakování akce
             stavVyroby = VstupUziv.rozhodnutiVyroba();
-        };
+        }
     }
 
 }
