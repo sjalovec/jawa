@@ -1,8 +1,12 @@
 package unitTests;
 
-import vyrobky.TypVyrobku;
-import ;
+import storage.Sklad;
 
 public class VstupUzivUtest {
-    VstupUziv.vratVyber.vyber = 1;
+    public static void objednejZboziTest(){
+        //String zbozi = "kolo";
+        System.out.println("\ntest objednání zobží");
+        Sklad.objednejZbozi("kolo", 1);
+        
+    };
 }

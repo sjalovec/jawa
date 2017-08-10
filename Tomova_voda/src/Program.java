@@ -25,6 +25,7 @@ public class Program {
             //volání na opakování akce
             stavVyroby = VstupUziv.rozhodnutiVyroba();
         }
+        unitTests.VstupUzivUtest.objednejZboziTest();
     }
 
 }
