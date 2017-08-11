@@ -44,7 +44,7 @@ public class VstupUzivUtest {
         }
     }
     
-    public static void vyrobky.VyrobkyIface vyrobVyrobek2Test(){
+    public static vyrobky.VyrobkyIface vyrobVyrobek2Test(){
         VyrobkyIface vyrobenyVyrobekzLinkyTest = null;
         //Linka2;
                 return vyrobenyVyrobekzLinkyTest;

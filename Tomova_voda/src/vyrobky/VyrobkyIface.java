@@ -1,7 +1,5 @@
 package vyrobky;
 
-import zbozicko.TypZbozi;
-
 public abstract class VyrobkyIface {
     private TypVyrobku vyrobek = null;
     
