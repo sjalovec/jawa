@@ -4,37 +4,41 @@ package storage;
 public class Sklad {
 
     //zatim konfigurace na Liberta
-    public static int pocetKolo = 2;
-    public static int pocetRam = 0;
+    public static int pocetKolo = 1;
+    public static int pocetRam = 1;
     public static int pocetSedlo = 1;
-    
+
     //metoda objednejZbozi neni potreba pro přídávání zboží, nakonec se pouzila metoda stavZboziVypocet
+    // pro potřeby unit testu upraveno, aby při volání objednávalo zboží a "dávalo" na sklad
     public static void objednejZbozi(String zbozi, int pocetKs) {
         switch (zbozi) {
             case "kolo":
-                //pocetKolo = pocetKolo + pocetKs;
+                //
                 if (pocetKs != 0) {
-                System.out.println("Bylo přidáno " + pocetKs + " ks zboží " + zbozi + " na sklad.");
+                    pocetKolo = pocetKolo + pocetKs;
+                    System.out.println("Bylo přidáno " + pocetKs + " ks zboží " + zbozi + " na sklad.");
                 }
                 break;
             case "sedlo":
-                //pocetSedlo = pocetSedlo + pocetKs;
+                //
                 if (pocetKs != 0) {
-                System.out.println("Bylo přidáno " + pocetKs + " ks zboží " + zbozi + " na sklad.");
+                    pocetSedlo = pocetSedlo + pocetKs;
+                    System.out.println("Bylo přidáno " + pocetKs + " ks zboží " + zbozi + " na sklad.");
                 }
                 break;
             case "ram":
-                //pocetRam = pocetRam + pocetKs;
+                //
                 if (pocetKs != 0) {
-                System.out.println("Bylo přidáno " + pocetKs + " ks zboží " + zbozi + " na sklad.");
+                    pocetRam = pocetRam + pocetKs;
+                    System.out.println("Bylo přidáno " + pocetKs + " ks zboží " + zbozi + " na sklad.");
                 }
                 break;
             default:
                 System.out.println("Nebylo zadáno správné zboží.");
                 break;
         }
-    };
-    
+    }
+
     public static void vypisStavZbozi(String zbozi) {
         switch (zbozi) {
             case "kolo":
@@ -50,15 +54,15 @@ public class Sklad {
                 System.out.println("Nebylo zadáno správné zboží.");
                 break;
         }
-    };
-    
+    }
+
     public static void stavZboziVypocet(String vstupVyrobekObjZbozi) {
         switch (vstupVyrobekObjZbozi) {
             case "Liberta":
                 int lib_kol = 2 - pocetKolo;
                 int lib_sed = 1 - pocetSedlo;
                 int lib_ram = 1 - pocetRam;
-                pocetKolo = pocetKolo + lib_kol;                
+                pocetKolo = pocetKolo + lib_kol;
                 pocetSedlo = pocetSedlo + (lib_sed);
                 pocetRam = pocetRam + (lib_ram);
                 objednejZbozi("kolo", lib_kol);
@@ -88,8 +92,8 @@ public class Sklad {
                 objednejZbozi("ram", tr_ram);
                 break;
         }
-    };
-    
+    }
+
     public static boolean dostatekZbozi(String vstupZbozi) {
         switch (vstupZbozi) {
             case "Liberta":
@@ -113,5 +117,5 @@ public class Sklad {
             default:
                 return false;
         }
-    };
+    }
 }

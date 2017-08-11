@@ -2,15 +2,9 @@ package vyroba;
 //doplnit kontrolu na pocet zbozi na sklade pred voláním konstruktoru (nejlep jako metoda volana vstupní promenou)
 
 import storage.RunOutOfGoodies;
+import vyrobky.*;
 import storage.Sklad;
-import vyrobky.Dvoukolo;
-import vyrobky.Liberta;
-import vyrobky.Trikolka;
-import vyrobky.TypVyrobku;
-import vyrobky.VyrobkyIface;
-import zbozicko.Kolo;
-import zbozicko.Ram;
-import zbozicko.Sedlo;
+import zbozicko.*;
 
 public class Linka2 {
 
@@ -43,7 +37,7 @@ public class Linka2 {
                         pocetVyrobku++;
                         break;
                     }
-                }                
+                }
                 break;
             case TRIKOLKA:
                 for (int i = 0; i < 2; i++) {
@@ -56,7 +50,7 @@ public class Linka2 {
                         pocetVyrobku++;
                         break;
                     }
-                }               
+                }
                 break;
             default:
                 System.out.println("vyber LIBERTA, DVOUKOLO nebo TRIKOLKA");
