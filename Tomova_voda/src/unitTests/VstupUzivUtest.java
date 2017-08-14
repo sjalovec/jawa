@@ -1,6 +1,9 @@
 package unitTests;
 
+import storage.RunOutOfGoodies;
 import storage.Sklad;
+import vyroba.Linka2;
+import vyrobky.TypVyrobku;
 import vyrobky.VyrobkyIface;
 
 public class VstupUzivUtest {
@@ -44,9 +47,10 @@ public class VstupUzivUtest {
         }
     }
     
-    public static vyrobky.VyrobkyIface vyrobVyrobek2Test(){
+    public static vyrobky.VyrobkyIface vyrobVyrobek2Test() throws RunOutOfGoodies{
         VyrobkyIface vyrobenyVyrobekzLinkyTest = null;
-        //Linka2;
+        System.out.println("Teď jsem v testu výroby Liberta v rámci volání výrobní linky");
+        Linka2.vyrobVyrobek2(TypVyrobku.LIBERTA);
                 return vyrobenyVyrobekzLinkyTest;
     }
 }

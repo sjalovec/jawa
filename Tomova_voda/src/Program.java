@@ -35,7 +35,8 @@ public class Program {
         unitTests.VstupUzivUtest.vypisStavZboziTest();
         //zjisti, zda je dostatek zbozi na vyrobeni kol
         unitTests.VstupUzivUtest.dostatekZboziTest();
-        
+        //otestování vyrobení liberty
+        unitTests.VstupUzivUtest.vyrobVyrobek2Test();
         
     }
 
